@@ -1,0 +1,263 @@
+*,*::after,*::before{
+    margin: 0;
+    transition: .3s;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: monospace;
+
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #18122B;
+    color: #ECF2FF;
+    flex-direction: column;
+}
+.todoContainer{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 7px 5px 1px #ecf2ff23;
+}
+.title h2{
+    font-size: 40px;
+    border-bottom: 1px solid #ecf2ff48;
+    width: fit-content;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Start Stayling Todo Content  */
+
+.todoContent{
+    width: 80%;
+    margin: 0 auto;
+    border: 4px solid #79a3ff44;
+    padding: 20px 0;
+}
+.task{
+    font-weight: bold;
+    font-size: 14px;
+    padding: 7px;
+    margin: 10px 0;
+    display: none;
+}
+.task.add{
+    background-color: #03c9877e;
+}
+.task.remove{
+    background-color: #ff46468d;
+}
+.task.war{
+    background-color: #ff46468d;
+}
+.task.active-task{
+    display: block;
+}
+
+
+
+.todoContent input[type='text']{
+    outline: none;
+    padding: 7px;
+    width: 60%;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 5px solid transparent;
+}
+.todoContent input[type='text']::placeholder{
+    font-weight: bolder;
+    font-size: 12px;
+}
+.todoContent input[type='text']:focus{
+    font-size: 16px;
+    border: 5px solid #09a6c9;
+}
+
+#btnSubmit{
+    border: 5px solid transparent;
+    outline: none;
+    padding: 7px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: monospace;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+#btnSubmit:hover{
+    background-color: #0c081c;
+    border: 1px solid #ecf2ff84;
+    color: #ECF2FF;
+    border: 5px solid #09a6c9;
+}
+
+ /* Start Stayling Todo Task's  */
+
+ .todoTasks{
+    margin: 20px auto;
+    border: 4px solid #17d58c4d;
+    padding: 20px 0;
+    width: 80%;
+ }
+ .todoTasks .utasks{
+    background-color: #09a6c925;
+    padding: 7px;
+    margin-bottom: 10px;
+ }
+ 
+ .todoTasks li{
+    width: 100%;
+    background-color: #393053;
+    margin: 10px 0;
+    padding: 7px 10px;
+    color: #E5E5CB;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+.btns{
+    padding: 4px;
+ }
+.todoTasks li span{
+    font-size: 18px;
+    cursor: pointer;
+ }
+.todoTasks li span:active{
+    font-size: 16px;
+ }
+.todoTasks li span.del{
+    color: #e63030d7;
+ }
+.todoTasks li span.check{
+    color: #54d23b;
+ }
+li.check{
+    background-color: #54d23b2d;
+}
+
+
+
+
+
+
+
+@media screen and (min-width:799px) and (max-width:998px) {
+    .title{
+        font-size:21px !important;
+    }
+    .todoContainer{
+        width: 80%;
+        padding: 10px;
+    }
+    .todoTasks{
+        width: 80%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .todoContent{
+        width: 80%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .todoContent input[type='text']{
+      width: 70%;
+      margin-bottom: 10px;
+    }
+    #btnSubmit{
+        margin: 10px 0;
+    }
+   
+}
+
+@media screen and (min-width:569px) and (max-width:798px) {
+    .title{
+        font-size:21px !important;
+    }
+    .todoContainer{
+        width: 90%;
+        padding: 10px;
+    }
+    .todoTasks{
+        width: 90%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .todoContent{
+        width: 90%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .todoContent input[type='text']{
+      width: 80%;
+      margin-bottom: 10px;
+    }
+    #btnSubmit{
+        width: 100px;
+        margin: 10px 0;
+    }
+   
+}
+
+@media screen and (max-width:568px) {
+    .title{
+        font-size:21px !important;
+    }
+    .todoContainer{
+        width: 100%;
+        padding: 10px 0;
+    }
+    .todoTasks{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .todoContent{
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .todoContent input[type='text']{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    #btnSubmit{
+        width: 100%;
+        margin: 10px 0;
+    }
+   
+}
+
+.delete-button {
+  background: red; 
+  color: white; 
+  border-color: maroon;
+  font-weight:bold;
+  padding: .3em;
+  cursor: pointer;
+}
